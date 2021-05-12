@@ -1,0 +1,1025 @@
+@import "_fonts.scss";
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    background-color:#FFFFFF;
+}
+body._lock {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+       
+}
+
+.header {
+    background-color: #ffffff;
+    
+
+    &__container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 70px;
+        
+    }
+    &__logo {
+        position: relative;
+        z-index: 5;
+        width: 98.56px;
+        height: 25px;
+        padding-left: 20px;
+    }
+    &__btns {
+        width: 130px;
+        height: 37px;
+        padding: 0px 2px;
+        background-color: #fff;
+        border-radius: 48px;
+        border: 1px solid #E2E8F0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__btn {
+        font-family: TTTravels-Regular;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 110%;
+        background-color: #fff;
+        z-index: 2;
+        border-radius: 34px;
+        width: 55px;
+        height: 31px;
+    }
+    &__btn:hover {
+        cursor: pointer;
+    }
+    &__phone {
+        color: #404040;
+	    font-size: 16px;
+        font-family: TTTravels-Bold;
+        line-height: 19,2px;
+        letter-spacing: 0.2px;
+	    font-weight: 900;
+        padding-right: 20px;
+    }
+    &__phone a {
+        color: #404040;
+	    font-size: 16px;
+        font-family: TTTravels-Bold;
+        line-height: 19,2px;
+        letter-spacing: 0.2px;
+	    font-weight: 900;
+    }
+    &__phone a:hover {
+        color: rgb(133, 133, 133);
+    }
+    &__phone_vline {
+        position: relative;
+    }
+    &__phone_vline::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 14px;
+        background-color: black;
+        left: 50%;
+        top: 1px;
+    }
+}
+.header__container.scrolled {
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+    
+}
+#first-btn:target,
+#second-btn:target {
+    background-color: blue;
+}
+
+.menu {
+    
+    &__icon {
+        display: none;
+    }
+    &__list li {
+        margin: 0 0 0 20px;
+        
+    }
+    &__link {
+        color: Black;
+        font-family: TTTravels-Regular;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.2px;
+    }
+    &__link:hover {
+        color:rgb(133, 133, 133);
+        text-decoration: underline;
+        text-decoration-color: rgb(133, 133, 133);
+    }
+}
+body._touch .menu__list li {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    padding: 0 calc(50% - 720px);
+    
+    &__img {
+    }
+    &__text {
+        padding: 200px 170px 0px 170px;
+    }
+    &__text h1 {
+        font-family: TTTravels-Regular;
+        font-weight: 400;
+        font-size: 76px;
+        line-height: 83,6px;
+    }
+    &__text p {
+        font-family: TTTravels-Light;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25.2px;
+        margin-top: 30px;
+    }
+    &_button {
+        display: inline-block;
+        width: 352.06px;
+        height: 352.06px;
+        transition:.3s;
+        position: fixed;
+        bottom: -65px;
+        left: calc(50% - 176.03px);
+        transform: rotate(-15deg);
+        z-index: 5;
+    }
+    &_button:hover {
+        transform: rotate(15deg);
+        
+        
+    }
+}
+.circle {
+    display: inline-block;
+    width: 176.03px;
+    height: 176.03px;
+    background-color: #5A30F0;
+    border-radius:50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-88.015px;
+    margin-top:-88.015px;
+    z-index: 4;
+}
+.circle:hover {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}  
+.text {
+    position:absolute;
+    top:50%;
+    display:inline-block;
+    z-index: 10;
+    width:100%;
+    font-family: TTTravels-Medium;
+    font-size: 18px;
+    text-align:center;
+    margin-top: -20px;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-transform:uppercase;
+    line-height: 23,4px;
+    letter-spacing: 3%;
+    padding: 0px 100px;  
+}
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 73px;
+    padding-bottom: 70px;
+    flex-wrap: wrap;
+    &__block {
+        width: 300px;
+        height: 328px;
+        background-color: #F3F6FB;
+        text-align: center;
+        display: flex;
+        min-width: 300px;
+        margin-bottom: 30px;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 8px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        transition: all 0.1s ease;
+    }
+    &__block:hover {
+        background-color: #5A30F0;
+    }
+    &__block:hover.features__block p {
+        display: block;
+        height: 100%;
+        padding: 30px ;
+        color: #FFFFFF;
+        background-color: #5A30F0;
+        font-family: TTTravels-Regular;
+        font-size: 16px;
+        line-height: 22,4px;
+        font-weight: 400;
+        text-align: left;
+    }
+    &__block:hover.features__block h3 {
+        display: none;
+    }
+    &__block:hover.features__block img {
+        opacity: 0;
+    }
+    &__block_text h3 {
+        font-family: TTTravels-Regular;
+        font-size: 24px;
+        line-height: 31,2px;
+        font-weight: 500px;
+        padding: 20px 40px;
+    }
+    &__block_text p {
+        display: none;
+    }
+    &__block_img {
+    }
+}
+.img-down {
+    position: absolute;
+    bottom: 0;
+    left: 55px;
+}
+.img-downtwo {
+    position: absolute;
+    bottom: 0;
+    right: 57px;
+}
+.how {
+    &__text {
+        display: flex;
+        align-items: baseline;
+        padding: 60px calc(50% - 550px);
+    }
+    &__text h3 {
+        
+        font-family: TTTravels-Regular;
+        font-size: 44px;
+        font-weight: 400;
+        line-height: 52,8px;
+        color: #404040;
+    }
+    &__text p {
+        font-family: TTTravels-Regular;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25,2px;
+        color: #404040;
+    }
+    &__title {
+        width: 100%;
+        margin-right: 320px;
+    }
+    &__content {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        
+    }
+    &__menu {
+        width: 26%;
+        background-color: #5A30F0;
+        text-align: left;
+    }
+    &__menu h3 {
+        font-family: TTTravels-Regular;
+        padding-left: 60px;
+        padding-top: 35px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20,8px;
+        color: #FFFFFF;
+    }
+    &__menu_list {
+        padding-top: 30%;
+        padding-left: 60px;
+    }
+    &__menu_link {
+        font-family: TTTravels-Regular;
+        font-size: 44px;
+        font-weight: 400;
+        line-height: 52,8px;
+        color: #FFFFFF;
+        opacity: 0.7; 
+    }
+    &__menu_list li {
+        margin-bottom: 22px;
+    }
+    &__menu_link:hover {
+        opacity: 1;
+        font-style: italic;
+    }
+    &__pic {
+        width: 74%;
+    }
+}
+.fas {
+    color: #FFFFFF;
+    font-size: 30px;
+    margin-right: 10px;
+    opacity: 0.7;
+}
+
+//   ---------------------------------
+@media (min-width: 1440px) {
+    .menu {
+        &__list {
+            display: flex;
+            align-items: center;
+        }
+        &__list li {
+            padding: 10px 0;
+        }
+    }
+    .how {
+        &__menu {
+            flex: 1 1 31%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1439px) and (min-width: 1301px) {
+    .menu {
+        &__list {
+            display: flex;
+            align-items: center;
+        }
+        &__list li {
+            padding: 10px 0;
+        }
+    }
+    .content {
+        padding: 0 calc(50% - 580px);
+        &__text {
+            padding-top: 150px;
+            padding-left: 130px;
+        }
+    }
+    .how {
+        &__menu {
+            flex: 1 1 31%;
+        }
+    }
+}
+@media only screen and (max-width: 1300px) and (min-width: 1201px) {
+    .menu {
+        &__list {
+            display: flex;
+            align-items: center;
+        }
+        &__list li {
+            padding: 10px 0;
+        }
+
+    }
+    .content {
+        padding: 0 calc(50% - 540px);
+        &__text {
+            padding-top: 150px;
+            padding-left: 130px;
+        }
+    }
+    .how {
+        &__text {
+            padding: 30px calc(50% - 440px);
+        }
+        &__text h3 {
+            font-size: 38px;
+            line-height: 52,8px;
+        }
+        &__text p {
+            font-size: 18px;
+            line-height: 15,2px;
+        }
+        &__title {
+            margin-right: 100px;
+        }
+        &__menu {
+            flex: 1 1 35%;
+        }
+        &__menu_list {
+            padding-top: 20%;
+            padding-left: 60px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+    .header {   
+        &__btns {
+            width: 100px;
+        }
+        &__phone a {
+            font-size: 14px;
+        }
+        &__phone span {
+            display: none;
+        }
+    }
+    .menu {
+        &__list {
+            display: flex;
+            align-items: center;
+        }
+        &__link {
+            font-size: 14px;
+        }
+    }
+    .content {
+        padding: 0 calc(50% - 500px);
+        &__text {
+            padding: 0 90px;
+            padding-top: 140px;
+        }
+        &__text h1 {
+            font-size: 80px;
+            line-height: 78px;
+        }
+        &__text p {
+            margin-top: 40px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+    .features {
+        justify-content: space-evenly;
+        &__block {
+            width: 35vw;
+        }
+    }
+    .how {
+        &__text {
+            padding: 30px calc(50% - 400px);
+        }
+        &__text h3 {
+            font-size: 34px;
+            line-height: 52,8px;
+        }
+        &__text p {
+            font-size: 18px;
+            line-height: 15,2px;
+        }
+        &__title {
+            margin-right: 100px;
+        }
+        &__menu {
+            flex: 1 1 35%;
+        }
+        &__menu h3 {
+            padding-left: 40px;
+        }
+        &__menu_list {
+            padding-top: 20%;
+            padding-left: 40px;
+        }
+        &__menu_link {
+            font-size: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+    .menu {
+        &__icon {
+            z-index: 5;
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 18px;
+            cursor: pointer;    
+        }
+        &__icon span,
+        &__icon::before,
+        &__icon::after {
+            left: 0;
+            position: absolute;
+            height: 10%;
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: #000;  
+        }
+        &__icon::before,
+        &__icon::after {
+            content: '';
+        }
+        &__icon::before {
+            top: 0;
+        }
+        &__icon::after {
+            bottom: 0;  
+        }
+        &__icon span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+            background-color: transparent;
+        }
+        &__icon._active span {
+            transform: scale(0) translate(0px, -50%);
+        }
+        &__icon._active::before {
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+        }
+        &__icon._active::after {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+        }
+        &__body {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255, 1);
+            padding: 100px 30px 30px 30px;
+            transition: all 0.3s ease 0s;
+            overflow: auto;
+        }
+        &__body._active {
+            left: 0;
+        }
+        &__body::before {
+            content: '';
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 70px;
+            z-index: 2;
+
+        }
+        &__list li {
+            margin: 0px 0px 30px 0px;
+        }
+        &__list li:last-child {
+            margin-bottom: 0;
+        }
+        &__link {
+            font-size: 24px;
+        }
+        
+    }
+    .header {
+        &__logo {
+            padding-left: 70px;
+        }
+        &__menu {
+            padding-right: 50px;
+        }
+        &__btns {
+            position: absolute;
+            top: 25%;
+            left: 23%;
+            z-index: 3;
+        }
+        &__phone {
+            position: absolute;
+            right: 10%;
+            z-index: 3;
+        }
+    }
+    .content {
+        padding: 0 calc(50% - 430px);
+        &__text {
+            padding: 100px calc(50% - 330px);
+        }
+        &__text h1 {
+            font-weight: 400;
+            font-size: 55px;
+            line-height: 60px;
+        }
+        &__text p {
+            font-weight: 600;
+            font-size: 20px;
+            margin-top: 30px;
+        }
+    }
+    .features {
+        padding-bottom: 50px;
+        justify-content: space-evenly;
+        &__block {
+            width: 35vw;
+        }
+    }
+    .how {
+        &__text {
+            padding: 30px calc(50% - 300px);
+        }
+        &__text h3 {
+            font-size: 34px;
+            line-height: 52,8px;
+        }
+        &__text p {
+            font-size: 18px;
+            line-height: 15,2px;
+        }
+        &__title {
+            margin-right: 100px;
+        }
+        &__menu {
+            flex: 1 1 36%;
+        }
+        &__menu h3 {
+            font-size: 14px;
+            padding-top: 10px;
+            padding-left: 20px;
+        }
+        &__menu_list {
+            padding-top: 20%;
+            padding-left: 20px;
+        }
+        &__menu_link {
+            font-size: 30px;
+        }
+    }
+    .fas {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+    .menu {
+        &__icon {
+            z-index: 5;
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 18px;
+            cursor: pointer;    
+        }
+        &__icon span,
+        &__icon::before,
+        &__icon::after {
+            left: 0;
+            position: absolute;
+            height: 10%;
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: #000;     
+        }
+        &__icon::before,
+        &__icon::after {
+            content: '';   
+        }
+        &__icon::before {
+            top: 0;
+        }
+        &__icon::after {
+            bottom: 0;
+        }
+        &__icon span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+            background-color: transparent;
+        }
+        &__icon._active span {
+            transform: scale(0) translate(0px, -50%);
+        }
+        &__icon._active::before {
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+        }
+        &__icon._active::after {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+        }
+        &__body {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255, 1);
+            padding: 100px 30px 30px 30px;
+            transition: all 0.3s ease 0s;
+            overflow: auto;
+        }
+        &__body._active {
+            left: 0;
+        }
+        &__body::before {
+            content: '';
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 70px;
+            z-index: 2;
+        }
+        &__list li {
+            margin: 0px 0px 30px 0px;
+        }
+        &__list li:last-child {
+            margin-bottom: 0;
+        }
+        &__link {
+            font-size: 24px;
+        }
+    }
+    .header {
+        &__menu {
+            padding-right: 20px;
+        }
+        &__btns {
+            position: absolute;
+            top: 25%;
+            left: 23%;
+            z-index: 3;
+        }
+        &__phone {
+            position: absolute;
+            right: 7%;
+            z-index: 3;
+        }
+    }
+    .content {
+        padding: 0 calc(50% - 350px);
+        &__img {
+            opacity: 0.4;
+        }
+        &__text {
+            position: absolute;
+            padding: 150px calc(50% - 160px);
+            text-align: center;
+        }
+        &__text h1 {
+            font-weight: 400;
+            font-size: 76px;
+            line-height: 83,6px;
+        }
+        &__text p {
+            font-weight: 600;
+            font-size: 20px;
+            margin-top: 20px;
+            color: #000;
+        }
+    }
+    .features {
+        padding-bottom: 40px;
+    }
+    .how {
+        &__text {
+            padding: 30px calc(50% - 220px);
+        }
+        &__text h3 {
+            font-size: 30px;
+            line-height: 52,8px;
+        }
+        &__text p {
+            font-size: 18px;
+            line-height: 5,2px;
+        }
+        &__title {
+            margin-right: 100px;
+        }
+        &__menu {
+            flex: 1 1 36%;
+        }
+        &__menu h3 {
+            font-size: 14px;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        &__menu_list {
+            padding-top: 22%;
+            padding-left: 10px;
+        }
+        &__menu_link {
+            font-size: 26px;
+        }
+    }
+    .fas {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .menu {
+        &__icon {
+            z-index: 5;
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 18px;
+            cursor: pointer;  
+        }
+        &__icon span,
+        &__icon::before,
+        &__icon::after {
+            left: 0;
+            position: absolute;
+            height: 10%;
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: #000;  
+        }
+        &__icon::before,
+        &__icon::after {
+            content: ''; 
+        }
+        &__icon::before {
+            top: 0;   
+        }
+        &__icon::after {
+            bottom: 0;  
+        }
+        &__icon span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+            background-color: transparent;    
+        }
+        &__icon._active span {
+            transform: scale(0) translate(0px, -50%);
+        }
+        &__icon._active::before {
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+        }
+        &__icon._active::after {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+        }
+        &__body {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255, 1);
+            padding: 100px 30px 30px 30px;
+            transition: all 0.3s ease 0s;
+            overflow: auto; 
+        }
+        &__body._active {
+            left: 0;
+        }
+        &__body::before {
+            content: '';
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 70px;
+            z-index: 2;
+        }
+        &__list li {
+            margin: 0px 0px 30px 0px;
+        }
+        &__list li:last-child {
+            margin-bottom: 0;
+        }
+        &__link {
+            font-size: 24px;
+        }
+    }
+    .header {
+        &__menu {
+            padding-right: 10px;
+        }
+        &__logo {
+            padding-left: 10px;
+        }
+        &__btns {
+            display: none;
+        }
+        &__phone {
+            position: absolute;
+            right: 8%;
+            z-index: 3;
+        }
+        &__phone a, span {
+            font-size: 14px;
+        }
+    }
+    .content {
+        padding: 0 calc(50% - 350px);
+        &__img {
+            opacity: 0.4;
+        }
+        &__text {
+            position: absolute;
+            padding: 140px calc(50% - 160px);
+            text-align: center;
+        }
+        &__text h1 {
+            font-weight: 400;
+            font-size: 76px;
+            line-height: 83,6px;
+        }
+        &__text p {
+            font-weight: 600;
+            font-size: 20px;
+            margin-top: 25px;
+            color: #000;
+        }
+        &_button {
+            bottom: -20px;
+            width: 176px;
+            height: 176px;
+            left: calc(50% - 88px);
+        }
+    }
+    .circle {
+        width: 88px;
+        height: 88px;
+        margin-left:-44px;
+        margin-top:-44px;
+        z-index: 4;
+    }  
+    .text {
+        top:50%;
+        font-size: 12px;
+        margin-top: -10px;
+        padding: 0px 50px;
+        
+    }
+    .features {
+        padding-bottom: 36px;
+    }
+    .how {
+        &__text {
+            padding: 30px calc(50% - 150px);
+        }
+        &__text h3 {
+            font-size: 20px;
+            line-height: 52,8px;
+        }
+        &__text p {
+            font-size: 14px;
+            line-height: 5,2px;
+        }
+        &__title {
+            margin-right: 20px;
+        }
+
+        &__menu {
+            flex: 1 1 26%;
+        }
+        &__menu h3 {
+            font-size: 10px;
+            padding-top: 10px;
+            padding-left: 5px;
+        }
+        &__menu_list {
+            padding-top: 22%;
+            padding-left: 5px;
+        }
+        &__menu_link {
+            font-size: 14px;
+        }
+    }
+    .fas {
+        font-size: 14px;
+    }
+}
